@@ -34,6 +34,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	persist.sys.usb.config=adb \
 	ro.cust.cdrom=/dev/null	
 
+# Force enable updatable APEX
+PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.apex.updatable=true
+
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
